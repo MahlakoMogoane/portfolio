@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <title>Home</title>
+    <style>
+        .hero {
+            background-color: #2b8530; /* Dark blue */
+            color: #FFFFFF; /* White text */
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .hero h1 {
+            font-size: 3rem; /* Large heading */
+        }
+        .hero p {
+            font-size: 1.25rem; /* Lead paragraph */
+            margin-bottom: 1.5rem;
+        }
+        .btn-custom, .btn-submit {
+            background-color: #000; /* Light blue */
+            color: #fff; /* Dark blue for text */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-custom:hover {
+            background-color: #2b8530; /* Change to white on hover */
+            color: #fff; /* Keep dark blue text */
+            text-decoration: underline;
+        }
+
+        .btn-submit:hover {
+            background-color: #2d8132; /* Change to white on hover */
+            color: #fff; /* Keep dark blue text */
+        }
+
+        .about, #skillsHeading{
+            display: flex;
+            padding: 20px;
+        }
+
+        .h2{
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .table td {
+          padding: 15px; /* Adjust the padding value as needed */
+        }
+
+        .form-control, #submit{
+          border-radius: 15px;
+          height: 60px;
+        }
+
+        #job{
+          height: 150px;
+        }
+
+        .raleway-h1, h2, h5 {
+          font-family: "Raleway", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 500;
+          font-style: normal;
+        }
+
+        .roboto-slab-p {
+          font-family: "Roboto Slab", serif;
+          font-optical-sizing: auto;
+          font-weight: 200;
+          font-style: normal;
+        }
+
+        #submit:hover{
+          background-color: #2E7D32;
+        }
+
+        .navbar {
+            transition: background-color 0.3s;
+        }
+
+        .navbar.scrolled {
+            background-color: #2b8530 !important;
+        }
+
+        .navbar-brand{
+          padding-left: 30px;
+        }
+        .nav-item{
+          padding-right: 30px;
+          color: white;
+        }
+
+        .nav-link{
+          color: white;
+        }
+    </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar sticky-top" style="background-color: #2b8530;">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">Mahlako Mogoane</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <!--<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Home</a>
+                </li>-->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<section class="hero">
+    <div>
+        <h1>Welcome to My Portfolio</h1>
+        <p class="lead">I'm a creative developer crafting beautiful and functional software experiences.</p>
+        <a href="#projects" class="btn btn-custom btn-lg mt-3">Explore My Work</a>
+        <a href="#about" class="btn btn-custom btn-lg mt-3">Download My CV</a>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2>About Me</h2>
+                <p class="lead">
+                    I am a dedicated student working towards a degree in Computer Science and Informatics from the University of Johannesburg. My approach to projects is rooted in cerativity, adaptability and future-planning, ensuring that I understand client needs and deliver solutions that exceed expectations. Having helped clients develop systems they are in love with, I prioritize quality and efficiency, employing best practices in coding and design while remaining flexible to changes in project requirements. Outside of work, I enjoy playing the bass, poetry, painting and drawing, which inspire my creativity and help me maintain a balanced and detailed perspective in both my personal and professional life.
+                </p>
+                <a onclick="downloadPDF('https://drive.google.com/file/d/1rmTCL8Wn5HkUbqFGB6pO41Iqfi2Ucjwd/view?usp=drive_link')" class="btn btn-submit btn-lg mt-3">View My CV</a>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="mahlako.jpg" alt="Your Name" class="img-fluid rounded-circle" style="max-width: 80%; height: auto;">
+            </div>
+        </div>
+    </div>
+    </div>
+    <hr>
+</section>
+
+
+<section class="skills" id="skills">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <h2 id="skillsHeading">My Skills in IT and Software Engineering</h2>
+
+        <div class="accordion clearfix" id="accordionSkills">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <!--style="background-color: #99df9c; color:#000"-->
+                Programming Languages
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+
+                <div class="row">
+                  <div class="col-6">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <p class="mb-0">HTML</p>
+                      <p class="mb-0">85%</p>
+                  </div>
+                    <div class="progress" style="height: 7px; margin-bottom: 10px;"">
+                      <div class="progress-bar" role="progressbar" style="width: 85%; background-color: #ff5733;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <p class="mb-0">CSS3</p>
+                      <p class="mb-0">75%</p>
+                  </div>
+                    <div class="progress" style="height: 7px; margin-bottom: 10px;"">
+                      <div class="progress-bar" role="progressbar" style="width: 75%; background-color: #2965f1;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <p class="mb-0">JavaScript</p>
+                      <p class="mb-0">60%</p>
+                  </div>
+                    <div class="progress" style="height: 7px; margin-bottom: 10px;"">
+                      <div class="progress-bar" role="progressbar" style="width: 60%; background-color: #F0DB4F;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <p class="mb-0">Python</p>
+                      <p class="mb-0">50%</p>
+                  </div>
+                    <div class="progress" style="height: 7px; margin-bottom: 10px;"">
+                      <div class="progress-bar" role="progressbar" style="width: 50%; background-color: #4584b6;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <p class="mb-0">SQL</p>
+                      <p class="mb-0">80%</p>
+                  </div>
+                    <div class="progress" style="height: 7px; margin-bottom: 10px;"">
+                      <div class="progress-bar" role="progressbar" style="width: 80%; background-color: #00758F;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <p class="mb-0">ASP.NET</p>
+                      <p class="mb-0">90%</p>
+                  </div>
+                    <div class="progress" style="height: 7px; margin-bottom: 10px;"">
+                      <div class="progress-bar" role="progressbar" style="width: 90%; background-color: #2b88d8;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <p class="mb-0">Java</p>
+                      <p class="mb-0">87%</p>
+                  </div>
+                    <div class="progress" style="height: 7px; margin-bottom: 10px;"">
+                      <div class="progress-bar" role="progressbar" style="width: 87%; background-color: red;" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <p class="mb-0">C++</p>
+                      <p class="mb-0">65%</p>
+                  </div>
+                    <div class="progress" style="height: 7px; margin-bottom: 10px;"">
+                      <div class="progress-bar" role="progressbar" style="width: 65%; background-color: #2b88d8;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <p class="mb-0">VB.NET</p>
+                      <p class="mb-0">80%</p>
+                  </div>
+                    <div class="progress" style="height: 7px; margin-bottom: 10px;"">
+                      <div class="progress-bar" role="progressbar" style="width: 80%; background-color: purple;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <p class="mb-0">Delphi</p>
+                      <p class="mb-0">70%</p>
+                  </div>
+                    <div class="progress" style="height: 7px; margin-bottom: 10px;">
+                      <div class="progress-bar" role="progressbar" style="width: 70%; background-color: red;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <p class="mb-0">MongoDB</p>
+                      <p class="mb-0">25%</p>
+                  </div>
+                    <div class="progress" style="height: 7px; margin-bottom: 10px;"">
+                      <div class="progress-bar" role="progressbar" style="width: 25%; background-color: greenyellow;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Web Development
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h5>Front-End Development using:</h5>
+                      <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>ASP.NET</li>
+                      </ul>
+                
+                      <h5>Experience with frameworks such as:</h5>
+                      <ul>
+                        <li>Bootstrap</li>
+                      </ul>
+
+                      <h5>Experience with Back-End frameworks such as:</h5>
+                      <ul>
+                        <li>Node.js</li>
+                        <li>ASP.NET C#</li>
+                      </ul>
+
+                <h5>Knowledge of:</h5>
+                <ul>
+                  <li>RESTful APIs</li>
+                  <li>ITIL Principles</li>
+                </ul>
+              </div>
+
+                <!--add images of each language in a grid-->
+                <div class="col-md-6 mt-5">
+              <div class="table-responsive">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td class="border-0 text-center align-middle">
+                        <img src="html-5-logo-svgrepo-com.svg" class="img-fluid" width="100" height="100">
+                      </td>
+
+                      <td class="border-0 text-center align-middle">
+                        <img src="css-3-svgrepo-com.svg" class="img-fluid" width="100" height="100">
+                      </td>
+
+                      <td class="border-0 text-center align-middle">
+                        <img src="javascript-logo-svgrepo-com.svg" class="img-fluid" width="100" height="100">
+                      </td>
+
+                      <td class="border-0 text-center align-middle">
+                        <img src="aspnet-svgrepo-com.svg" class="img-fluid" width="100" height="100">
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <td class="border-0 text-center align-middle">
+                        <img src="bootstrap-logo.svg" class="img-fluid" width="100" height="100">
+                      </td>
+
+                      <td class="border-0 text-center align-middle">
+                        <img src="nodejs-1-logo-svgrepo-com.svg" class="img-fluid" width="100" height="100">
+                      </td>
+
+                      <td class="border-0 text-center align-middle">
+                        <img src="itil-seeklogo.svg" class="img-fluid" width="100" height="100">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+  
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Database Management
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p>
+                        <!--DB Management-->
+                        <ul>
+                            <li>Strong Understanding of database concepts, including SQL and relational database management systems (RDBMS) languages
+                            such as SQL and T-SQL.</li>
+                            <li>Experience with NoSQL databases such as MongoDB.</li>
+                            <li>Knowledgeable in Database Design, optimization, and performance tuning.</li>
+                        </ul>
+                    </p>
+                    </div>
+
+                      <div class="col-md-4 mt-5">
+                        <div class="table-responsive">
+                          <table class="table">
+                            <tbody>
+                              <tr>
+                                <td class="border-0 text-center align-middle">
+                                  <img src="sql-file-symbol-svgrepo-com.svg" width="100" height="100">
+                                </td>
+                                <td class="border-0 text-center align-middle">
+                                  <img src="mongodb-logo-svgrepo-com.svg" width="100" height="100">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Software Development Tools and Methodologies
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p>
+                        <ul>
+                            <li>Version Control using Git and proficiency with GitHub.</li>
+                        </ul>
+                    </p>
+                    </div>
+
+                      <div class="col-md-4 mt-5">
+                        <div class="table-responsive">
+                          <table class="table">
+                            <tbody>
+                              <tr>
+                                <td class="border-0 text-center align-middle">
+                                  <img src="git-svgrepo-com.svg" width="100" height="100">
+                                </td>
+                                <td class="border-0 text-center align-middle">
+                                  <img src="github-svgrepo-com.svg" width="100" height="100">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Problem-Solving and Algorithms
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p>
+                        <!--problem-solving and algorithms-->
+                        <ul>
+                            <li>Strong problem-solving skills and the ability to analyze complex issues.</li>
+                            <li>Proficient in Data Structures and Algorithms.</li>
+                            <li>Experience with algorithmic problem-solving plateforms like leetcode and hackerrank</li>
+                        </ul>
+                    </p>
+                    </div>
+
+                    <div class="col-md-4 mt-5">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <tbody>
+                            <tr>
+                              <td class="border-0 text-center align-middle">
+                                <img src="leetcode-svgrepo-com.svg" width="100" height="100">
+                              </td>
+                              <td class="border-0 text-center align-middle">
+                                <img src="hackerrank-svgrepo-com.svg" width="100" height="100">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                Software Engineering
+              </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="container">
+                  <div class="row">
+                      <p>
+                        <!--software enginerring-->
+                        <ul>
+                            <li>Experience with Software Development Lifecycle(SDLC) methodologies.</li>
+                            <li>Understanding of Software Architecture Patterns and Design Principles.</li>
+                            <li>Knowledge of Software Testing and Debugging Techniques.</li>
+                        </ul>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                Additional/Soft Skills
+              </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p>
+                  <!--additional skills (soft skills)-->
+                  <ul>
+                      <li>Strong communication and collaboration skills.</li>
+                      <li>Excellent time management and organizational skills.</li>
+                      <li>Insatiable Curiosity contributing to continuous learning</li>
+                      <li>Creative and critical thinker.</li>
+                      <li>Excellent problem-solver.</li>
+                      <li>Leadership skills.</li>
+                      <li>Conflict management.</li>
+                  </ul>
+              </p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingEight">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                Certificates
+              </button>
+            </h2>
+            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="card">
+                      <img class="card-img-top" src="University_of_Johannesburg_Logo.svg.png" width="200" height="200">
+                      <div class="card-body">
+                        <h5 class="card-title">BSc. information Technology in Computer Science and Informatics</h5>
+                        <p class="card-text">The purpose of the BSc Information Technology programme is to develop qualified scientists who can identify, evaluate and solve problems associated with information technology and be able to assume and demonstrate initiative and responsibility in related academic and professional contexts in South Africa as well as in the international world.</p>
+                        <p class="card-text text-muted">Description from the Univeristy of Johannesburg</p>
+                        <p class="card-text"><strong>From:</strong> University of Johannesburg</p>
+                        <span class="text-muted"><em>To Be Completed in 2026</em></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                      <img class="card-img-top" src="University_of_Johannesburg_Logo.svg.png" width="200" height="200">
+                      <div class="card-body">
+                        <h5 class="card-title">Artificial Intelligence in the 4IR</h5>
+                        <p class="card-text">Artificial Intelligence in the 4IR introduces you to artificial intelligence (AI), its applications, and its implications for society and the future of work in the Fourth Industrial Revolution (4IR).</p>
+                        <p class="card-text text-muted">Description from the Univeristy of Johannesburg</p>
+                        <p class="card-text"><strong>From:</strong> University of Johannesburg</p>
+                        <span class="text-muted"><em>December 2022</em></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                      <img class="card-img-top" src="University_of_Johannesburg_Logo.svg.png" width="200" height="200">
+                      <div class="card-body">
+                        <h5 class="card-title">Financial Literacy - Be Money Wise</h5>
+                        <p class="card-text">Financial Literacy: Be Money Wise Decisions about finances and personal financial management is a matter that involves everyone. </p>
+                        <p class="card-text text-muted">Description from the Univeristy of Johannesburg</p>
+                        <p class="card-text"><strong>From:</strong> University of Johannesburg</p>
+                        <span class="text-muted"><em>June 2023</em></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <h2 id="skillsHeading">Some of My Projects</h2>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <div class="card mb-3" style="max-width: 540px;">
+                <div class="row">
+                  <div class="col-md-4">
+                    <img src="pexels-pixabay-40784.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">KiloWater</h5>
+                      <p class="card-text">This project was created for a local business. It is a static website made in HTML5 and CSS3 to showcase the services of the business and how potential customers can get in contact for their Water needs.</p>
+                      <p class="card-text"><small class="text-body-secondary">Made in 2022</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <div class="card mb-3" style="max-width: 540px;">
+                <div class="row">
+                  <div class="col-md-4">
+                    <img src="logo.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Women Paying It Forward SA</h5>
+                      <p class="card-text">A template was used from Colorlib as the primary aim was to revamp the existing website and update the information and images for an NPO in South Africa known as Women Paying It Forward. The provide mentoring services to young girls.</p>
+                      <p class="card-text"><small class="text-body-secondary">Made in 2024</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" style="background-color: #cde4af;" >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="container">
+          <div class="row align-items-center">
+
+            <div class="col-md-6 justify-content-center" style="border-radius: 15px; padding: 50px 0px 50px 0px;">
+              <p>Want to connect?</p>
+              <h1>Leave a Message!</h1>
+              <img src="message.gif" class="img-fluid" width="200px" height="200px" style="padding-top: 30px;">
+            </div>
+
+            <div class="col-md-6" style="border-radius: 15px; padding: 40px 0px 50px 0px;">
+              <div class="mb-3">
+                <label for="name" class="form-label">Your First Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Your First Name" maxlength="20">
+
+                <label for="email" class="form-label">Your Email address:</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="job" class="form-label">Describe what you need (255 characters)</label>
+                <textarea class="form-control" id="job" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <button class="btn btn-custom" id="submit" style="border-radius: 15px; width: 100%;">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</section>
+
+<footer style="background-color: #08440b; color: #fff;">
+  <div class="container py-4">
+      <div class="row">
+          <div class="col-md-6">
+              <h5>About Me</h5>
+              <p>Passionate and driven Computer Science student with a strong foundation in programming, algorithms, and software development. Skilled in languages such as Python, Java, and C++, with experience in web development and data analysis. Eager to apply theoretical knowledge to real-world problems, seeking opportunities for internships and collaborative projects. Committed to continuous learning and exploring emerging technologies in the field.</p>
+          </div>
+          <div class="col-md-6 ml-6">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled">
+                  <li><a href="#" class="text-white">Home</a></li>
+                  <li><a href="#About" class="text-white">About</a></li>
+                  <li><a href="#skills" class="text-white">Skills</a></li>
+                  <li><a href="#projects" class="text-white">Projects</a></li>
+                  <li><a href="#contact">Contact</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="text-center py-3">
+          <small>&copy; 2023 Mahlako Mogoane. All Rights Reserved.</small>
+      </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+      } else {
+          navbar.classList.remove('scrolled');
+      }
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+        // Function to update button color based on aria-expanded
+        function updateButtonColor(button) {
+            if (button.getAttribute('aria-expanded') === 'true') {
+                button.style.backgroundColor = '#99df9c'; // Change color when expanded
+                button.style.color = '#000';
+            } else {
+                button.style.backgroundColor = ''; // Reset color when collapsed
+            }
+        }
+
+        // Add event listener to accordion buttons
+        document.querySelectorAll('.accordion-item .accordion-button').forEach(button => {
+            // Update button color on click
+            button.addEventListener('click', function() {
+                updateButtonColor(this);
+            });
+            // Update button color on page load
+            updateButtonColor(button);
+        });
+    });
+
+    function downloadPDF(url) {
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'CV.pdf'; // Specify the filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
