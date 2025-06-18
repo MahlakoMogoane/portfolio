@@ -166,7 +166,7 @@
                 <p class="lead">
                     I am a dedicated student working towards a degree in Computer Science and Informatics from the University of Johannesburg. My approach to projects is rooted in creativity, adaptability and future-planning, ensuring that I understand client needs and deliver solutions that exceed expectations. Having helped clients develop systems they are in love with, I prioritize quality and efficiency, employing best practices in coding and design while remaining flexible to changes in project requirements. Outside of work, I enjoy playing the bass, poetry, painting and drawing, which inspire my creativity and help me maintain a balanced and detailed perspective in both my personal and professional life.
                 </p>
-                <a onclick="downloadPDF('https://drive.google.com/file/d/1tZnBQR2d7QCHfLnh--JW-yS71e7CdftO/view?usp=drive_link')" class="btn btn-submit btn-lg mt-3">View My CV</a>
+                <a onclick="downloadPDF('https://docs.google.com/document/d/14G3JoNsknBx1tHcAnH3wqNV3gXRlUGO6GaWfiLVQIKQ/edit?usp=sharing')" class="btn btn-submit btn-lg mt-3">View My CV</a>
             </div>
             <div class="col-md-6 text-center">
                 <img src="mahlako.jpg" alt="Your Name" class="img-fluid rounded-circle" style="max-width: 80%; height: auto;">
@@ -614,6 +614,23 @@
                       </div>
                     </div>
                   </div>
+
+                  <div class="col-md-3">
+                    <div class="card">
+                      <img class="card-img-top" src="freecodecamp.webp" width="200" height="200">
+                      <div class="card-body">
+                        <h5 class="card-title">Foundational C# With Microsoft</h5>
+                        <p class="card-text">"This course offers a comprehensive introduction to C# programming, covering its core concepts, syntax, and practical application in software development.
+
+                          Through hands-on exercises and projects, you will learn the fundamentals of C#, including variables, data types, control structures, and object-oriented programming principles.
+                          
+                          By the end of this course, you will have gained the practical skills and knowledge needed to confidently leverage C# for building applications."</p>
+                        <p class="card-text text-muted">Description from FreeCodeCamp</p>
+                        <p class="card-text"><strong>From:</strong> FreeCodeCamp</p>
+                        <span class="text-muted"><em>March 2025</em></span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -777,6 +794,34 @@
     link.click();
     document.body.removeChild(link);
 }
+
+  document.getElementById("submit").addEventListener("click", function () {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const job = document.getElementById("job").value.trim();
+
+    if (!name || !email || !job) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    const subject = encodeURIComponent("New Contact Form Submission");
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${job}`);
+
+    // Construct the mailto link
+    window.location.href = `mailto:mahlakomogoane@outlook.com?subject=${subject}&body=${body}`;
+  });
+
+  function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  }
+
 </script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
