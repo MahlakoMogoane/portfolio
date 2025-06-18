@@ -775,7 +775,7 @@
             }
         }
 
-        // Add event listener to accordion buttons
+        // event listener to accordion buttons
         document.querySelectorAll('.accordion-item .accordion-button').forEach(button => {
             // Update button color on click
             button.addEventListener('click', function() {
@@ -789,7 +789,7 @@
     function downloadPDF(url) {
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'CV.pdf'; // Specify the filename
+    link.download = 'CV.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
